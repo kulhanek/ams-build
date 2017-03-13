@@ -16,6 +16,13 @@ if [ -z "$N" ]; then
     fi
 fi
 
+# ------------------------------------------------------------------------------
+# update revision number
+_PWD=$PWD
+cd src/projects/ams/8.0
+./UpdateGitVersion activate
+cd $_PWD
+
 echo ""
 echo ">>> Number of CPUs for building: $N"
 

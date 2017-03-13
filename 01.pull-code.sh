@@ -18,6 +18,8 @@ function dowload_code() {
 
 # ------------------------------------------------------------------------------
 
+rm -f src/projects/ams/8.0/src/lib/ams/AMSMainHeader.hpp
+
 cat repositories | grep -v '^#' | while read A B; do
    dowload_code $A $B || exit 1
 done
