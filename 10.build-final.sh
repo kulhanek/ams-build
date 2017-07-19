@@ -3,7 +3,7 @@
 PREFIX=/software/ncbr/softmods/8.0
 
 if [ "`hostname -f`" != "deb8.ncbr.muni.cz" ]; then
-    echo "unsupported build machine!"
+    echo "unsupported build machine - it must be deb8.ncbr.muni.cz!"
     exit 1
 fi
 
@@ -30,8 +30,11 @@ cd $_PWD
 
 echo ""
 echo ">>> Number of CPUs for building: $N"
+echo ""
 
 # ------------------------------------------------------------------------------
+
+set -o pipefail
 
 cmake -DCMAKE_INSTALL_PREFIX="$PREFIX" . 2>&1 | tee configure.log || exit 1
 make -j "$N" 2>&1 | tee make.log || exit 1
