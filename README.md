@@ -7,7 +7,9 @@ Utilities for testing and building of the [AMS - Advanced Module System](https:/
 * ams-personal
 * integration with [ABS - Advanced Batch System](https://github.com/kulhanek/abs)
 
-## Testing Mode
+## Building and Installation
+
+### Testing Mode
 ```bash
 $ git clone --recursive https://github.com/kulhanek/ams-build.git
 $ cd ams-build
@@ -16,7 +18,7 @@ $ ./01.pull-code.sh
 $ ./04.build-inline.sh      # build the code inline in src/
 ```
 
-## Production Build
+### Production Build
 ```bash
 $ git clone --recursive https://github.com/kulhanek/ams-build.git
 $ cd ams-build
