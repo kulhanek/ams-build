@@ -13,7 +13,7 @@ $ git clone --recursive https://github.com/kulhanek/ams-build.git
 $ cd ams-build
 $ ./build-utils/00.init-links.sh
 $ ./01.pull-code.sh
-$ ./04.build-inline.sh   # build the code inline in src/
+$ ./04.build-inline.sh      # build the code inline in src/
 ```
 
 ## Production Build
@@ -22,7 +22,7 @@ $ git clone --recursive https://github.com/kulhanek/ams-build.git
 $ cd ams-build
 $ ./build-utils/00.init-links.sh
 $ ./01.pull-code.sh
-$ ./10.build-final.sh
+$ ./10.build-final.sh       # install dir: /software/ncbr/softmods/8.0
 ```
 
 
