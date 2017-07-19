@@ -1,39 +1,28 @@
-# cats-build
-Utilities for testing and buliding of the [CATs - Conversion and Analysis Tools](https://github.com/kulhanek/cats) package. 
+# ams-build
+Utilities for testing and buliding of the [AMS - Advanced Module System](https://github.com/kulhanek/ams) package.
 
-## CATs Features:
-* processing data from simulations performed in the [AMBER](https://ambermd.org) package
-* various CLI utilitis for manipulation with topology, coordinates, and trajectories
-* scripting in the cats interpreter based on JavaScript
+## AMS Features:
+* software management (sites and modules)
+* ams-personal
+* integration with [ABS - Advanced Batch System](https://github.com/kulhanek/abs)
 
 ## Testing Mode
 The typical procedure is:
 ```bash
-$ git clone --recursive https://github.com/kulhanek/cats-build.git
-$ cd cats-build
+$ git clone --recursive https://github.com/kulhanek/ams-build.git
+$ cd ams-build
 $ ./build-utils/00.init-links.sh
 $ ./01.pull-code.sh
 $ ./04.build-inline.sh   # build the code inline in src/
 ```
-## Production Build into the Infinity software repository
+## Production Build
 The typical procedure is:
 ```bash
-$ git clone --recursive https://github.com/kulhanek/cats-build.git
-$ cd cats-build
+$ git clone --recursive https://github.com/kulhanek/ams-build.git
+$ cd ams-build
 $ ./build-utils/00.init-links.sh
 $ ./01.pull-code.sh
 $ ./10.build-final.sh
 ```
 
-## Production Build into Custom Directory
-The typical procedure is:
-```bash
-$ git clone --recursive https://github.com/kulhanek/cats-build.git
-$ cd cats-build
-$ ./build-utils/00.init-links.sh
-$ ./01.pull-code.sh
-$ cmake -DCMAKE_INSTALL_PREFIX=/path/to/cats/installation/directory
-$ make
-$ make install
-```
 
