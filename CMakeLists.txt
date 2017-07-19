@@ -68,3 +68,10 @@ ADD_SUBDIRECTORY(src/projects/hipoly/1.0)
 ADD_SUBDIRECTORY(src/projects/w3tk/1.0)
 ADD_SUBDIRECTORY(src/projects/ams/8.0)
 
+# ==============================================================================
+# inter-project dependencies  --------------------------------------------------
+# ==============================================================================
+
+ADD_DEPENDENCIES(w3tk_shared hipoly_shared)
+ADD_DEPENDENCIES(ams_shared w3tk_shared hipoly_shared)
+
