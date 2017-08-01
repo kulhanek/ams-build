@@ -1,16 +1,11 @@
 #!/bin/bash
 
-PREFIX=/software/ncbr/softmods/8.0
-
-if [ "`hostname -f`" != "deb8.ncbr.muni.cz" ]; then
-    echo "unsupported build machine - it must be deb8.ncbr.muni.cz!"
-    exit 1
-fi
+PREFIX=/home/kulhanek/.software/softmods/8.0
+N=4
 
 # add cmake from modules if they exist
-if type module &> /dev/null; then
-    module add cmake
-fi
+amsmodule add cmake || exit 1
+sysmodule add git/2.13.1 || exit 1
 
 # determine number of available CPUs if not specified
 if [ -z "$N" ]; then
