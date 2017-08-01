@@ -1,4 +1,6 @@
 10.build-final.sh
+10.build-final.sh-it4i
+10.build-final.sh-ncbr
 CMakeLists.txt
 README.md
 README.push

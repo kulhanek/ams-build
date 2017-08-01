@@ -1,11 +1,16 @@
 #!/bin/bash
 
 PREFIX=/home/kulhanek/.software/softmods/8.0
-N=4
+
+if [ "`hostname -f`" != *"salomon"* ]; then
+    echo "unsupported build machine - it must be salomon!"
+    exit 1
+fi
+
+set -o pipefail
 
 # add cmake from modules if they exist
-amsmodule add cmake || exit 1
-sysmodule add git/2.13.1 || exit 1
+module add cmake || exit 1
 
 # determine number of available CPUs if not specified
 if [ -z "$N" ]; then
@@ -21,6 +26,7 @@ fi
 _PWD=$PWD
 cd src/projects/ams/8.0
 ./UpdateGitVersion activate
+if [ $? -ne 0 ]; then exit 1; fi
 cd $_PWD
 
 echo ""
@@ -28,8 +34,6 @@ echo ">>> Number of CPUs for building: $N"
 echo ""
 
 # ------------------------------------------------------------------------------
-
-set -o pipefail
 
 cmake -DCMAKE_INSTALL_PREFIX="$PREFIX" . 2>&1 | tee configure.log || exit 1
 make -j "$N" 2>&1 | tee make.log || exit 1
