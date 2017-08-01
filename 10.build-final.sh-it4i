@@ -2,7 +2,7 @@
 
 PREFIX=/home/kulhanek/.software/softmods/8.0
 
-if [ "`hostname -f`" != *"salomon"* ]; then
+if [[ "`hostname -f`" != *"salomon"* ]]; then
     echo "unsupported build machine - it must be salomon!"
     exit 1
 fi
