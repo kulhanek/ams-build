@@ -10,7 +10,7 @@ fi
 set -o pipefail
 
 # add cmake from modules if they exist
-module add cmake || exit 1
+module add cmake git || exit 1
 
 # determine number of available CPUs if not specified
 if [ -z "$N" ]; then
@@ -18,6 +18,9 @@ if [ -z "$N" ]; then
     type nproc &> /dev/null
     if type nproc &> /dev/null; then
         N=`nproc --all`
+    fi
+    if [ "$N" -gt 4 ]; then
+        N=4
     fi
 fi
 
