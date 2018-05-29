@@ -63,6 +63,7 @@ SET(CMAKE_BUILD_TYPE Release)
 # project subdirectories  ------------------------------------------------------
 # ==============================================================================
 
+ADD_SUBDIRECTORY(src/thirdparty/hwloc/2.0.1)
 # projects ---------------------------------------
 ADD_SUBDIRECTORY(src/projects/hipoly/1.0)
 ADD_SUBDIRECTORY(src/projects/w3tk/1.0)
@@ -73,5 +74,5 @@ ADD_SUBDIRECTORY(src/projects/ams/8.0)
 # ==============================================================================
 
 ADD_DEPENDENCIES(w3tk_shared hipoly_shared)
-ADD_DEPENDENCIES(ams_shared w3tk_shared hipoly_shared)
+ADD_DEPENDENCIES(ams_shared w3tk_shared hipoly_shared hwloc-build)
 
