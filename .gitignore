@@ -10,3 +10,14 @@ tools.paths
 06.gen-runtime-paths.sh
 08.git-status.sh
 ams-build.creator.user
+CMakeFiles/
+Makefile
+bin/
+cmake_install.cmake
+configure.log
+install.log
+install_manifest.txt
+lib/
+make.log
+test/
+CMakeCache.txt
