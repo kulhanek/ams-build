@@ -24,7 +24,7 @@ $ git clone --recursive https://github.com/kulhanek/ams-build.git
 $ cd ams-build
 $ ./build-utils/00.init-links.sh
 $ ./01.pull-code.sh
-$ ./10.build-final.sh       # install dir: /software/ncbr/softmods/8.0
+$ ./10.build-final.sh       # install dir: /software/ncbr/softmods/9.0
 ```
 
 

@@ -1,13 +1,8 @@
 #!/bin/bash
 
-PREFIX=/software/ncbr/softmods/8.0
+PREFIX=/software/ncbr/softmods/9.0
 
 set -o pipefail
-
-if [[ "`hostname -f`" != "deb8.ncbr.muni.cz" ]]; then
-    echo "unsupported build machine - it must be deb8.ncbr.muni.cz!"
-    exit 1
-fi
 
 # add cmake
 module add cmake git
