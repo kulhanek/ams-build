@@ -22,7 +22,7 @@ fi
 # ------------------------------------------------------------------------------
 # update revision number
 _PWD=$PWD
-cd src/projects/ams/8.0
+cd src/projects/ams/9.0
 ./UpdateGitVersion activate
 if [ $? -ne 0 ]; then echo "UpdateGitVersion failed"; exit 1; fi
 cd $_PWD

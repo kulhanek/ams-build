@@ -54,8 +54,8 @@ SET(CMAKE_C_FLAGS_RELEASE "-O2 -m64")
 SET(CMAKE_C_FLAGS_DEBUG "-g -m64 -Wall -Werror -pedantic-errors -Wundef -Wno-long-long")
 
 # C++ options
-SET(CMAKE_CXX_FLAGS_RELEASE "-O2 -m64")
-SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -m64 -g -Wall -Werror -pedantic-errors -Wundef -Wno-long-long")
+SET(CMAKE_CXX_FLAGS_RELEASE "-O2 -std=c++11 -m64")
+SET(CMAKE_CXX_FLAGS_DEBUG "-O0 -std=c++11 -m64 -g -Wall -Werror -pedantic-errors -Wundef -Wno-long-long")
 
 SET(CMAKE_BUILD_TYPE Release)
 #SET(CMAKE_BUILD_TYPE Debug)
@@ -64,11 +64,11 @@ SET(CMAKE_BUILD_TYPE Release)
 # project subdirectories  ------------------------------------------------------
 # ==============================================================================
 
-ADD_SUBDIRECTORY(src/thirdparty/hwloc/2.0.1)
+ADD_SUBDIRECTORY(src/thirdparty/hwloc/2.4.1)
 # projects ---------------------------------------
 ADD_SUBDIRECTORY(src/projects/hipoly/1.0)
 ADD_SUBDIRECTORY(src/projects/w3tk/1.0)
-ADD_SUBDIRECTORY(src/projects/ams/8.0)
+ADD_SUBDIRECTORY(src/projects/ams/9.0)
 
 # ==============================================================================
 # inter-project dependencies  --------------------------------------------------
