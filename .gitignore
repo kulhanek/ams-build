@@ -13,6 +13,7 @@ ams-build.creator.user
 CMakeFiles/
 Makefile
 bin/
+sbin/
 cmake_install.cmake
 configure.log
 install.log
